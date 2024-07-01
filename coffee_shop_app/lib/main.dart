@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         _horizontalScrollController.animateTo(
           scrollTo,
+          // ignore: prefer_const_constructors
           duration: Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
@@ -172,8 +173,8 @@ void _selectCategory(String category) {
                   _buildCategorySection("ROCKET CLASSIC TEA", [
                     Row(
                       children: [
-                        _buildItem("Да хун пао", "assets/10.png", "170 ₽"),
-                        _buildItem("Те гуань инь", "assets/11.png", "170 ₽"),
+                        _buildItem("Да хун пао", "assets/10.jpg", "170 ₽"),
+                        _buildItem("Те гуань инь", "assets/11.jpg", "170 ₽"),
                       ],
                     ),
                     
@@ -196,12 +197,9 @@ void _selectCategory(String category) {
                   ]),
                   const SizedBox(height: 20,)
                 ],
-              ),
-        ]),
-          ),
-      )],
-      ),
-    );
+              ),)
+        ),
+          ]));  
   }
 
   Widget _buildCategoryButton(String category) {
@@ -244,7 +242,7 @@ void _selectCategory(String category) {
             const SizedBox(width: 8),
             Text(
               title,
-              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -267,7 +265,7 @@ void _selectCategory(String category) {
     },
     child: Container(
       width: 160,
-      height: 260,
+      height: 280,
       padding: const EdgeInsets.all(10),
       margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
       decoration: BoxDecoration(
@@ -300,7 +298,7 @@ void _selectCategory(String category) {
           const SizedBox(height: 10),
           SizedBox(
             width: 160,
-            height: 50,
+            height: 75,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
