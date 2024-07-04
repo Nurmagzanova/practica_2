@@ -119,7 +119,8 @@ void _selectCategory(String category) {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: SafeArea(
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Горизонтальное меню категорий
@@ -199,7 +200,7 @@ void _selectCategory(String category) {
                 ],
               ),)
         ),
-          ]));  
+          ])));  
   }
 
   Widget _buildCategoryButton(String category) {
